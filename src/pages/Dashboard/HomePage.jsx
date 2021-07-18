@@ -50,7 +50,7 @@ function HomePage() {
             className={classes.root}
             container
             spacing={matches ? 3 : 1}
-            justify="center"
+            // justify="center"
             alignItems="center"
           >
             <Grid item xs={12} sm={6} md={3}>

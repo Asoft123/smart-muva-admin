@@ -31,9 +31,20 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   iconStyle: {
-    width: "55px",
-    height: "55px",
+    width: "40px",
+    height: "40px",
     color: "#707070",
+  },
+  iconContainer:{
+
+   width: "65px",
+   height: "65px",
+   display: "flex",
+   justifyContent: "center",
+   alignItems: "center",
+   borderRadius: "50%",
+   backgroundColor:`rgba(255, 177, 26, 0.2)`,
+
   },
   textContainer: {
     display: "flex",
@@ -46,13 +57,15 @@ function CustomCard(props) {
   const classes = useStyles(props);
 
   return (
-    <div style={{ display: "flex", flexFlow: "row wrap" }}>
+    <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "flex-start" }}>
       <Card className={classes.dashboardCard} variant="outlined">
-        <CardContent>
+        <CardContent >
           <Box className={classes.dashboardCardBox}>
             <Box className={classes.iconBox}>
               {icon && (
-                <img className={classes.iconStyle} src={icon} alt={title} />
+                <Box className={classes.iconContainer}>
+                  <img className={classes.iconStyle} src={icon} alt={title} />
+                </Box>
               )}
               <div className="textContainer">
                 <NumberFormat
